@@ -1,0 +1,17 @@
+<h2>Productos disponibles</h2>
+
+
+<button (click)="filtroStock(true)">Stock mayor a 50</button>
+<button (click)="filtroStock(false)">Ver Todos</button>
+
+<ul>
+@for (p of productosFiltrados; track p.id) {
+    <li>
+        @if (p.stock > 0) {
+            <app-producto 
+                (accionClick)="agregarAlCarrito($event)" 
+                [producto]="p"></app-producto>
+        } 
+    </li>
+}
+</ul>

@@ -1,0 +1,13 @@
+
+article {
+    padding: 15px;
+    border-radius: 20px 0;
+    display: flex;
+}
+
+.pocostock {
+    border: 15px solid gray;
+}
+.muchostock {
+    border-top-left-radius: 15px solid green;
+}

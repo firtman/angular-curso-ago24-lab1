@@ -1,0 +1,16 @@
+<!-- {{ producto | json }} -->
+
+<article 
+[style.background-color]="producto.color"
+[class.pocostock]="producto.stock < 15"
+[class.muchostock]="producto.stock > 50"
+>              
+    <div [style.flex]="65">{{ producto.nombre }}</div>
+    <div 
+        [style.flex]="35"
+        [style.text-align]="'end'"> 
+        {{ producto.precio | currency }}
+    </div>
+    
+    <button (click)="accionPresionada()">{{ iconoBoton }}</button>
+</article>
